@@ -1,0 +1,17 @@
+.git
+.gitignore
+docker/
+Dockerfile
+.env
+.env.example
+node_modules/
+vendor/
+storage/*
+!storage/app/public
+!storage/framework
+!storage/logs
+bootstrap/cache/*
+tests/
+*.md
+*.txt
+*.log
