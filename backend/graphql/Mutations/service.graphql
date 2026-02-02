@@ -1,0 +1,10 @@
+extend type Mutation {
+    createService(input: CreateServiceInput! @spread): ServiceMutationResponse!
+        @field(resolver: "App\\GraphQL\\Mutations\\CreateServiceMutation@createService")
+    
+    updateService(id: ID!, input: UpdateServiceInput! @spread): ServiceMutationResponse!
+        @field(resolver: "App\\GraphQL\\Mutations\\UpdateServiceMutation@updateService")
+    
+    deleteService(id: ID!): ServiceMutationResponse!
+        @field(resolver: "App\\GraphQL\\Mutations\\DeleteServiceMutation@deleteService")
+}
