@@ -1,0 +1,4 @@
+extend type Query {
+    homepageSections: [HomepageSection!]!
+    homepageSection(key: String!): HomepageSection
+}

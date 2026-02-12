@@ -1,0 +1,10 @@
+extend type Mutation {
+    createHomepageSection(input: CreateHomepageSectionInput! @spread): HomepageSectionMutationResponse!
+        @field(resolver: "App\\GraphQL\\Mutations\\CreateHomepageSectionMutation@createHomepageSection")
+    
+    updateHomepageSection(key: String!, input: UpdateHomepageSectionInput! @spread): HomepageSectionMutationResponse!
+        @field(resolver: "App\\GraphQL\\Mutations\\UpdateHomepageSectionMutation@updateHomepageSection")
+    
+    deleteHomepageSection(key: String!): HomepageSectionMutationResponse!
+        @field(resolver: "App\\GraphQL\\Mutations\\DeleteHomepageSectionMutation@deleteHomepageSection")
+}

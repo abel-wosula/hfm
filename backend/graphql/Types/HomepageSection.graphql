@@ -1,0 +1,55 @@
+type HomepageSection {
+    id: ID!
+    key: String!
+    type: String!
+    title: String!
+    subtitle: String
+    content: String
+    background_color: String
+    text_align: String
+    button_text: String
+    button_link: String
+    button_secondary_text: String
+    button_secondary_link: String
+    order: Int!
+    is_active: Boolean!
+}
+
+input CreateHomepageSectionInput {
+    key: String!
+    type: String!
+    title: String!
+    subtitle: String
+    content: String
+    background_color: String
+    text_align: String
+    button_text: String
+    button_link: String
+    button_secondary_text: String
+    button_secondary_link: String
+    order: Int!
+}
+
+input UpdateHomepageSectionInput {
+    key: String!
+    type: String
+    title: String
+    subtitle: String
+    content: String
+    background_color: String
+    text_align: String
+    button_text: String
+    button_link: String
+    button_secondary_text: String
+    button_secondary_link: String
+    order: Int
+}
+
+input DeleteHomepageSectionInput {
+    key: String!
+}
+
+type HomepageSectionMutationResponse {
+    message: String!
+    homepage_section: HomepageSection!
+}

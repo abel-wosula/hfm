@@ -3,7 +3,7 @@
   <section>
     <div
       class="relative min-h-screen bg-center bg-cover flex-items-center justify-center"
-      style="background-image: url('src/assets/images/studiofam.png')"
+      style="background-image: url('@/src/assets/home-bg.jpg')"
     >
       <div class="absolute inset-0 bg-black bg-opacity-25"></div>
       <div

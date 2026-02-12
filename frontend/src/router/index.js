@@ -6,8 +6,6 @@ import Music from "../views/music/index/Main.vue";
 import Team from "../views/team/index/Main.vue";
 import Event from "../views/events/index/Main.vue";
 import Service  from "../views/services/index/Main.vue";
-import AdminLogin from "../views/admin/index/Main.vue";
-import AdminDashboard from "../views/admin/views/dashboard.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,26 +45,7 @@ const router = createRouter({
       name: "events",
       component: Event,
     },
-    {
-      path: "/admin",
-      name: "admin",
-      component: AdminLogin,
-    },
-    {
-      path: "/admin/dashboard",
-      name: "admindashboard",
-      component: AdminDashboard,
-    },
   ],
 });
 
-router.beforeEach((to, from, next) => {
-  const isAdminAuthenticated = localStorage.getItem("adminToken");
-
-  if (to.meta.requiresAdmin && !isAdminAuthenticated) {
-    next("/admin/login");
-  } else {
-    next();
-  }
-});
 export default router;

@@ -1,4 +1,0 @@
-extend type Mutation {
-    loginAdmin(email: String!, password: String!): AuthPayload!
-        @field(resolver: "App\\GraphQL\\Mutations\\AuthMutator@loginAdmin")
-}
