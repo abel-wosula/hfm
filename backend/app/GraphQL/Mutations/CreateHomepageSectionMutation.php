@@ -23,8 +23,6 @@ class CreateHomepageSectionMutation{
         $homepage_section->is_active = true;
         $homepage_section->save();
 
-
-
         return [
             'message' => 'Homepage section created successfully!',
             'homepage_section' => $homepage_section,

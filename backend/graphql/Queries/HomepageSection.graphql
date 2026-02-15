@@ -1,4 +1,3 @@
 extend type Query {
-    homepageSections: [HomepageSection!]!
-    homepageSection(key: String!): HomepageSection
+    homepage_section: [HomepageSection!]! @paginate(defaultCount: 10)
 }
