@@ -210,7 +210,7 @@ const getImageUrl = (thumbnail) => {
   const cleanPath = thumbnail.replace(/^storage\//, '');
   
   // Construct the URL - adjust based on your backend URL
-  const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+  const baseUrl = import.meta.env.VITE_API_URL || 'https://holyfamilymedia.org/laravel/public/graphql';
   
   // Remove any leading slashes
   const finalPath = cleanPath.replace(/^\//, '');

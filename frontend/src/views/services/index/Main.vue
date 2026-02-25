@@ -237,7 +237,7 @@ const getImageUrl = (thumbnail) => {
   
   // Construct the URL - adjust based on your backend URL
   // You might want to use an environment variable for the base URL
-  const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+  const baseUrl = import.meta.env.VITE_API_URL || 'https://holyfamilymedia.org/laravel/public/graphql';
   const imageUrl = `${baseUrl}/storage/${cleanPath}`;
   
   console.log("Image URL constructed:", imageUrl);

@@ -6,10 +6,12 @@ import {
 
 // HTTP connection to the API
 const httpLink = createHttpLink({
-  // You should use an absolute URL here
-  uri: "http://localhost:8000/graphql",
+  uri: "http://127.0.0.1:8000/graphql",
+  headers: {
+    'X-Requested-With': 'XMLHttpRequest', // This tells Laravel it's an AJAX request
+  },
+  credentials: 'include',
 });
-
 // Cache implementation
 const cache = new InMemoryCache();
 

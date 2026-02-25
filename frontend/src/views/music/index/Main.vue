@@ -137,7 +137,7 @@ import Pagination from "@/components/pagination/Main.vue";
 import { UPLOADRECORDS_QUERY } from "@/graphql/Queries/uploadRecords.graphql";
 
 // Environment configuration - Make sure this matches your Laravel backend URL
-const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const baseUrl = import.meta.env.VITE_API_URL || "https://holyfamilymedia.org/laravel/public/graphql";
 
 // Reactive state
 const uploadRecords = ref([]);
